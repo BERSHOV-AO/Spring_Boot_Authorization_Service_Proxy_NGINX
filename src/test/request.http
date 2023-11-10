@@ -1,0 +1,25 @@
+#OK
+GET localhost:8080/authorize?user=Alex&password=qwerty
+Content-Type: application/json
+
+###
+#*** UnauthorizedUser throwException method ***
+GET localhost:8080/authorize?user=Maxim&password=ijJXT6W
+Content-Type: application/json
+
+###
+#*** InvalidCredentials throwException method ***
+GET localhost:8080/authorize?user=Rom&password=
+Content-Type: application/json
+
+###
+#user(min = 2, max = 20)
+GET localhost:8080/authorize?user=A&password=123456
+Content-Type: application/json
+
+###
+#password(min = 0, max = 10)
+GET localhost:8080/authorize?user=Ragnar&password=1234567890A
+Content-Type: application/json
+
+###
